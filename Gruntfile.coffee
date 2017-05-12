@@ -33,8 +33,8 @@ module.exports = (grunt) ->
         globalAlias: 'SimditorMarkdown'
         deps:
           'default': ['$', 'Simditor', 'toMarkdown', 'marked']
-          amd: ['jquery', 'simditor', 'to-markdown', 'marked']
-          cjs: ['jquery', 'simditor', 'to-markdown', 'marked']
+          amd: ['jquery', 'tar-simditor', 'to-markdown', 'marked']
+          cjs: ['jquery', 'tar-simditor', 'to-markdown', 'marked']
           global:
             items: ['jQuery', 'Simditor', 'toMarkdown', 'marked']
             prefix: ''
@@ -61,12 +61,12 @@ module.exports = (grunt) ->
           specs: 'spec/<%= name %>-spec.js'
           styles: 'styles/<%= name %>.css'
           vendor: [
-            'vendor/bower/jquery/dist/jquery.min.js'
-            'vendor/bower/simple-module/lib/module.js'
-            'vendor/bower/simple-hotkeys/lib/hotkeys.js'
-            'vendor/bower/simditor/lib/simditor.js'
-            'vendor/bower/to-markdown/dist/to-markdown.js'
-            'vendor/bower/marked/lib/marked.js'
+            'node_modules/jquery/dist/jquery.min.js'
+            'node_modules/simple-module/lib/module.js'
+            'node_modules/simple-hotkeys/lib/hotkeys.js'
+            'node_modules/tar-simditor/lib/simditor.js'
+            'node_modules/to-markdown/dist/to-markdown.js'
+            'node_modules/marked/lib/marked.js'
           ]
 
   grunt.loadNpmTasks 'grunt-contrib-sass'
